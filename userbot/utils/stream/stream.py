@@ -22,7 +22,7 @@ from userbot.utils.database import (add_active_chat,
                                        is_active_chat,
                                        is_video_allowed, music_on)
 from userbot.utils.exceptions import AssistantErr
-from YukkiMusic.utils.inline.play import (stream_markup,
+from userbot.utils.inline.play import (stream_markup,
                                           telegram_markup)
 from userbot.utils.inline.playlist import close_markup
 from userbot.utils.pastebin import Yukkibin
