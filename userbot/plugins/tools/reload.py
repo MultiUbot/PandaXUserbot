@@ -11,15 +11,15 @@ import asyncio
 from pyrogram import filters
 from pyrogram.types import CallbackQuery, Message
 
-from config import BANNED_USERS, MUSIC_BOT_NAME, adminlist, lyrical
+from userbot.config import BANNED_USERS, MUSIC_BOT_NAME, adminlist, lyrical
 from strings import get_command
-from YukkiMusic import app
-from YukkiMusic.core.call import Yukki
-from YukkiMusic.misc import db
-from YukkiMusic.utils.database import get_authuser_names, get_cmode
-from YukkiMusic.utils.decorators import (ActualAdminCB, AdminActual,
+from userbot import app
+from userbot.Session.call import Yukki
+from userbot.misc import db
+from userbot.utils.database import get_authuser_names, get_cmode
+from userbot.utils.decorators import (ActualAdminCB, AdminActual,
                                          language)
-from YukkiMusic.utils.formatters import alpha_to_int
+from userbot.utils.formatters import alpha_to_int
 
 ### Multi-Lang Commands
 RELOAD_COMMAND = get_command("RELOAD_COMMAND")
