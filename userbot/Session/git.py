@@ -14,7 +14,7 @@ from typing import Tuple
 from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError
 
-import config
+from userbot import config
 
 from ..logging import LOGGER
 
