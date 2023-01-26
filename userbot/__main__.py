@@ -17,7 +17,7 @@ from pytgcalls.exceptions import NoActiveGroupCall
 from userbot import config
 from userbot.config import BANNED_USERS
 from userbot import LOGGER, app, userbot
-from userbot.core.call import Panda
+from userbot.Session.call import Panda
 from userbot.plugins import ALL_MODULES
 from userbot.utils.database import get_banned_users, get_gbanned
 
