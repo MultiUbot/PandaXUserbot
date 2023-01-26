@@ -11,8 +11,8 @@ from typing import Union
 
 from pyrogram.types import InlineKeyboardButton
 
-from config import GITHUB_REPO, SUPPORT_CHANNEL, SUPPORT_GROUP
-from YukkiMusic import app
+from userbot.config import GITHUB_REPO, SUPPORT_CHANNEL, SUPPORT_GROUP
+from userbot import app
 
 
 def start_pannel(_):
