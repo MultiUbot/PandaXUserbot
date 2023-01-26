@@ -9,8 +9,8 @@
 
 import random
 
-from YukkiMusic import userbot
-from YukkiMusic.core.mongo import mongodb
+from userbot.Session import userbot
+from userbot.Session.mongo import mongodb
 
 db = mongodb.assistants
 
