@@ -13,21 +13,21 @@ from typing import Union
 
 from pyrogram.types import InlineKeyboardMarkup
 
-import config
-from YukkiMusic import Carbon, YouTube, app
-from YukkiMusic.core.call import Yukki
-from YukkiMusic.misc import db
-from YukkiMusic.utils.database import (add_active_chat,
+from userbot import config
+from userbot import Carbon, YouTube, app
+from userbot.Session.call import Panda as Yukki
+from userbot.misc import db
+from userbot.utils.database import (add_active_chat,
                                        add_active_video_chat,
                                        is_active_chat,
                                        is_video_allowed, music_on)
-from YukkiMusic.utils.exceptions import AssistantErr
+from userbot.utils.exceptions import AssistantErr
 from YukkiMusic.utils.inline.play import (stream_markup,
                                           telegram_markup)
-from YukkiMusic.utils.inline.playlist import close_markup
-from YukkiMusic.utils.pastebin import Yukkibin
-from YukkiMusic.utils.stream.queue import put_queue, put_queue_index
-from YukkiMusic.utils.thumbnails import gen_thumb
+from userbot.utils.inline.playlist import close_markup
+from userbot.utils.pastebin import Yukkibin
+from userbot.utils.stream.queue import put_queue, put_queue_index
+from userbot.utils.thumbnails import gen_thumb
 
 
 async def stream(
