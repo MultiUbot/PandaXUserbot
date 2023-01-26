@@ -8,9 +8,9 @@
 # All rights reserved.
 
 
-import config
-from config import PRIVATE_BOT_MODE
-from YukkiMusic.core.mongo import mongodb
+from userbot import config
+from userbot.config import PRIVATE_BOT_MODE
+from userbot.Session.mongo import mongodb
 
 channeldb = mongodb.cplaymode
 commanddb = mongodb.commands
