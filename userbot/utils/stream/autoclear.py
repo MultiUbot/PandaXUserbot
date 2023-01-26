@@ -9,7 +9,7 @@
 
 import os
 
-from config import autoclean
+from userbot.config import autoclean
 
 
 async def auto_clean(popped):
