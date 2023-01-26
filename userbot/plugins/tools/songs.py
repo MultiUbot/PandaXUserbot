@@ -17,13 +17,13 @@ from pyrogram.types import (InlineKeyboardButton,
                             InlineKeyboardMarkup, InputMediaAudio,
                             InputMediaVideo, Message)
 
-from config import (BANNED_USERS, SONG_DOWNLOAD_DURATION,
+from userbot.config import (BANNED_USERS, SONG_DOWNLOAD_DURATION,
                     SONG_DOWNLOAD_DURATION_LIMIT)
 from strings import get_command
-from YukkiMusic import YouTube, app
-from YukkiMusic.utils.decorators.language import language, languageCB
-from YukkiMusic.utils.formatters import convert_bytes
-from YukkiMusic.utils.inline.song import song_markup
+from userbot import YouTube, app
+from userbot.utils.decorators.language import language, languageCB
+from userbot.utils.formatters import convert_bytes
+from userbot.utils.inline.song import song_markup
 
 # Command
 SONG_COMMAND = get_command("SONG_COMMAND")
