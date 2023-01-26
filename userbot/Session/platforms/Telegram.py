@@ -16,11 +16,11 @@ from typing import Union
 from pyrogram.types import (InlineKeyboardButton,
                             InlineKeyboardMarkup, Voice)
 
-import config
-from config import MUSIC_BOT_NAME, lyrical
-from YukkiMusic import app
+from userbot import config
+from userbot config import MUSIC_BOT_NAME, lyrical
+from userbot import app
 
-from ..utils.formatters import (convert_bytes, get_readable_time,
+from userbot.utils.formatters import (convert_bytes, get_readable_time,
                                 seconds_to_min)
 
 downloader = {}
