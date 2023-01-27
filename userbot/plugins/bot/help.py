@@ -122,3 +122,32 @@ async def helper_cb(client, CallbackQuery, _):
         await CallbackQuery.edit_message_text(
             helpers.HELP_4, reply_markup=keyboard
         )
+    elif cb == "hb6":
+        await CallbackQuery.edit_message_text(
+            helpers.HELP_6, reply_markup=keyboard
+        )
+    elif cb == "hb7":
+        await CallbackQuery.edit_message_text(
+            helpers.HELP_7, reply_markup=keyboard
+        )
+    elif cb == "hb9":
+        await CallbackQuery.edit_message_text(
+            helpers.HELP_8, reply_markup=keyboard
+        )
+    elif cb == "hb10":
+        await CallbackQuery.edit_message_text(
+            helpers.HELP_9, reply_markup=keyboard
+        )
+    elif cb == "hb11":
+        await CallbackQuery.edit_message_text(
+            helpers.HELP_10, reply_markup=keyboard
+        )
+    elif cb == "hb12":
+        await CallbackQuery.edit_message_text(
+            helpers.HELP_11, reply_markup=keyboard
+        )
+    elif cb == "hb8":
+        await CallbackQuery.edit_message_text(
+            helpers.HELP_12, reply_markup=keyboard
+        )
+    
