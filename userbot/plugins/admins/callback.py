@@ -7,7 +7,7 @@ from userbot.config import (AUTO_DOWNLOADS_CLEAR, BANNED_USERS,
                     SOUNCLOUD_IMG_URL, STREAM_IMG_URL,
                     TELEGRAM_AUDIO_URL, TELEGRAM_VIDEO_URL, adminlist)
 from userbot import YouTube, app
-from userbot.core.call import Panda as Yukki
+from userbot.Session.call import Panda as Yukki
 from userbot.misc import SUDOERS, db
 from userbot.utils.database import (is_active_chat,
                                        is_music_playing, is_muted,
