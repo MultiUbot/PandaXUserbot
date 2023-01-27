@@ -10,13 +10,13 @@
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, Message
 
-from config import BANNED_USERS
+from userbot config import BANNED_USERS
 from strings import get_command
-from YukkiMusic import app
-from YukkiMusic.utils.database import (get_playmode, get_playtype,
+from userbot import app
+from userbot.utils.database import (get_playmode, get_playtype,
                                        is_nonadmin_chat)
-from YukkiMusic.utils.decorators import language
-from YukkiMusic.utils.inline.settings import playmode_users_markup
+from userbot.utils.decorators import language
+from userbot.utils.inline.settings import playmode_users_markup
 
 ### Commands
 PLAYMODE_COMMAND = get_command("PLAYMODE_COMMAND")
