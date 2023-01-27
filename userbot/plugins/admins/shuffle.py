@@ -12,11 +12,11 @@ import random
 from pyrogram import filters
 from pyrogram.types import Message
 
-from config import BANNED_USERS
+from userbot.config import BANNED_USERS
 from strings import get_command
-from YukkiMusic import app
-from YukkiMusic.misc import db
-from YukkiMusic.utils.decorators import AdminRightsCheck
+from userbot import app
+from userbot.misc import db
+from userbot.utils.decorators import AdminRightsCheck
 
 # Commands
 SHUFFLE_COMMAND = get_command("SHUFFLE_COMMAND")
