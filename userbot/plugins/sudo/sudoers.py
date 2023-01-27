@@ -10,12 +10,12 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from config import BANNED_USERS, MONGO_DB_URI, OWNER_ID
+from userbot.config import BANNED_USERS, MONGO_DB_URI, OWNER_ID
 from strings import get_command
-from YukkiMusic import app
-from YukkiMusic.misc import SUDOERS
-from YukkiMusic.utils.database import add_sudo, remove_sudo
-from YukkiMusic.utils.decorators.language import language
+from userbot import app
+from userbot.misc import SUDOERS
+from userbot.utils.database import add_sudo, remove_sudo
+from userbot.utils.decorators.language import language
 
 # Command
 ADDSUDO_COMMAND = get_command("ADDSUDO_COMMAND")
