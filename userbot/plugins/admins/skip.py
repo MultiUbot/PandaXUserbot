@@ -10,18 +10,18 @@
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, Message
 
-import config
-from config import BANNED_USERS
+from userbot import config
+from userbot.config import BANNED_USERS
 from strings import get_command
-from YukkiMusic import YouTube, app
-from YukkiMusic.core.call import Yukki
-from YukkiMusic.misc import db
-from YukkiMusic.utils.database import get_loop
-from YukkiMusic.utils.decorators import AdminRightsCheck
-from YukkiMusic.utils.inline.play import (stream_markup,
+from userbot import YouTube, app
+from userbot.core.call import Panda as Yukki
+from userbot.misc import db
+from userbot.utils.database import get_loop
+from userbot.utils.decorators import AdminRightsCheck
+from userbot.utils.inline.play import (stream_markup,
                                           telegram_markup)
-from YukkiMusic.utils.stream.autoclear import auto_clean
-from YukkiMusic.utils.thumbnails import gen_thumb
+from userbot.utils.stream.autoclear import auto_clean
+from userbot.utils.thumbnails import gen_thumb
 
 # Commands
 SKIP_COMMAND = get_command("SKIP_COMMAND")
