@@ -13,18 +13,18 @@ from pyrogram import filters
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 
-from config import BANNED_USERS
+from userbot config import BANNED_USERS
 from strings import get_command
-from YukkiMusic import app
-from YukkiMusic.misc import SUDOERS
-from YukkiMusic.utils import get_readable_time
-from YukkiMusic.utils.database import (add_banned_user,
+from userbot import app
+from userbot.misc import SUDOERS
+from userbot.utils import get_readable_time
+from userbot.utils.database import (add_banned_user,
                                        get_banned_count,
                                        get_banned_users,
                                        get_served_chats,
                                        is_banned_user,
                                        remove_banned_user)
-from YukkiMusic.utils.decorators.language import language
+from userbot.utils.decorators.language import language
 
 # Command
 GBAN_COMMAND = get_command("GBAN_COMMAND")
