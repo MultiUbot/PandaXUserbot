@@ -12,7 +12,7 @@ import asyncio
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup
 
-from userbot config import BANNED_USERS
+from userbot.config import BANNED_USERS
 from userbot import app
 from userbot.utils.database import (get_global_tops,
                                        get_particulars, get_userss)
