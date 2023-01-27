@@ -10,14 +10,14 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from config import BANNED_USERS
+from userbot config import BANNED_USERS
 from strings import get_command
-from YukkiMusic import app
-from YukkiMusic.misc import SUDOERS
-from YukkiMusic.utils.database import (blacklist_chat,
+from userbot import app
+from userbot.misc import SUDOERS
+from userbot.utils.database import (blacklist_chat,
                                        blacklisted_chats,
                                        whitelist_chat)
-from YukkiMusic.utils.decorators.language import language
+from userbot.utils.decorators.language import language
 
 # Commands
 
