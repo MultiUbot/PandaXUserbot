@@ -17,7 +17,7 @@ from pyrogram.types import (InlineKeyboardMarkup, InputMediaPhoto,
 from pytgcalls.exceptions import NoActiveGroupCall
 
 from userbot import config
-from userbot config import BANNED_USERS, lyrical
+from userbot.config import BANNED_USERS, lyrical
 from strings import get_command
 from userbot import (Apple, Resso, SoundCloud, Spotify, Telegram,
                         YouTube, app)
