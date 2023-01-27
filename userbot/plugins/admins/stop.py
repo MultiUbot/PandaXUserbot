@@ -10,12 +10,12 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from config import BANNED_USERS
+from userbot.config import BANNED_USERS
 from strings import get_command
-from YukkiMusic import app
-from YukkiMusic.core.call import Yukki
-from YukkiMusic.utils.database import set_loop
-from YukkiMusic.utils.decorators import AdminRightsCheck
+from userbot import app
+from userbot.core.call import Panda as Yukki
+from userbot.utils.database import set_loop
+from userbot.utils.decorators import AdminRightsCheck
 
 # Commands
 STOP_COMMAND = get_command("STOP_COMMAND")
