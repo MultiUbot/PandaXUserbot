@@ -17,7 +17,7 @@ from pyrogram.types import (InlineKeyboardButton,
                             InlineKeyboardMarkup, Voice)
 
 from userbot import config
-from userbot config import MUSIC_BOT_NAME, lyrical
+from userbot.config import MUSIC_BOT_NAME, lyrical
 from userbot import app
 
 from userbot.utils.formatters import (convert_bytes, get_readable_time,
