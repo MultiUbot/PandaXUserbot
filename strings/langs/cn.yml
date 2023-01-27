@@ -222,19 +222,19 @@ S_B_7: "👤 Bot 所有者"
 S_B_8: "🔎 如何使用？查看命令菜单。"
 #Help
 
-H_B_1 : "ADMIN COMMAND" 
-H_B_2 : "PLAY COMMAND" 
-H_B_3 : "BOT COMMAND" 
-H_B_4 : "EXTRA COMMAND" 
-H_B_5 : "ADD & REMOVE SUDO USERS" 
-H_B_6 : "SEARCH MODE" 
-H_B_7 : "OPTIONS in SETTINGS" 
-H_B_8 : "REPEAT PLAY" 
-H_B_9 : "BLACKLIST CHAT FUNCTION" 
-H_B_10 : "COMMANDS STATS" 
-H_B_11 : "VIDEICALL FUNCTION" 
-H_B_12 : "PRIVATE BOT FUNCTIONS" 
-H_B_13 : "Close Menu"
+H_B_1：“管理命令” 
+H_B_2：“主要命令” 
+H_B_3：“机器人命令”
+H_B_4：“额外命令” 
+H_B_5：“系统用户” 
+H_B_6：“搜索模式” 
+H_B_7：“设置” 
+H_B_8：“重复播放” 
+H_B_9：“黑名单” 
+H_B_10：“命令统计” 
+H_B_11：“命令统计” 
+H_B_12：“私人机器人功能” 
+H_B_13：“关闭菜单”
 
 
 #PlayMode
