@@ -10,12 +10,12 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from config import BANNED_USERS
+from userbot.config import BANNED_USERS
 from strings import get_command
-from YukkiMusic import app
-from YukkiMusic.core.call import Yukki
-from YukkiMusic.utils.database import is_music_playing, music_on
-from YukkiMusic.utils.decorators import AdminRightsCheck
+from userbot import app
+from userbot.core.call import Panda as Yukki
+from userbot.utils.database import is_music_playing, music_on
+from userbot.utils.decorators import AdminRightsCheck
 
 # Commands
 RESUME_COMMAND = get_command("RESUME_COMMAND")
