@@ -10,7 +10,7 @@
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, Message
 
-from userbot config import BANNED_USERS
+from userbot.config import BANNED_USERS
 from strings import get_command
 from userbot import app
 from userbot.utils.database import (get_playmode, get_playtype,
