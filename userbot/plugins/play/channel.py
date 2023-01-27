@@ -10,11 +10,11 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from config import BANNED_USERS
+from useebor config import BANNED_USERS
 from strings import get_command
-from YukkiMusic import app
-from YukkiMusic.utils.database import set_cmode
-from YukkiMusic.utils.decorators.admins import AdminActual
+from userbot import app
+from userbot.utils.database import set_cmode
+from userbot.utils.decorators.admins import AdminActual
 
 ### Multi-Lang Commands
 CHANNELPLAY_COMMAND = get_command("CHANNELPLAY_COMMAND")
