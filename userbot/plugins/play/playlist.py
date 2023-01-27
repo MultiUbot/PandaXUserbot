@@ -15,7 +15,7 @@ from pyrogram import filters
 from pyrogram.types import (InlineKeyboardButton,
                             InlineKeyboardMarkup, Message)
 
-from userbot config import BANNED_USERS, SERVER_PLAYLIST_LIMIT
+from userbot.config import BANNED_USERS, SERVER_PLAYLIST_LIMIT
 from strings import get_command
 from userbot import Carbon, YouTube, app
 from userbot.utils.database import (delete_playlist, get_playlist,
