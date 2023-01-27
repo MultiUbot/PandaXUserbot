@@ -10,7 +10,7 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from useebor config import BANNED_USERS
+from useebor.config import BANNED_USERS
 from strings import get_command
 from userbot import app
 from userbot.utils.database import set_cmode
