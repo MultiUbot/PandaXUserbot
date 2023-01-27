@@ -13,7 +13,7 @@ from pyrogram.types import Message
 from userbot.config import BANNED_USERS
 from strings import get_command
 from userbot import app
-from userbot.core.call import Panda as Yukki
+from userbot.Session.call import Panda as Yukki
 from userbot.utils.database import is_music_playing, music_on
 from userbot.utils.decorators import AdminRightsCheck
 
