@@ -256,19 +256,19 @@ S_B_7 : "👤 المطور"
 S_B_8 : "⚙️ قائمة الاوامر."
 
 #Help 
-H_B_1 : "ADMIN COMMAND" 
-H_B_2 : "PLAY COMMAND" 
-H_B_3 : "BOT COMMAND" 
-H_B_4 : "EXTRA COMMAND" 
-H_B_5 : "ADD & REMOVE SUDO USERS" 
-H_B_6 : "SEARCH MODE" 
-H_B_7 : "OPTIONS in SETTINGS" 
-H_B_8 : "REPEAT PLAY" 
-H_B_9 : "BLACKLIST CHAT FUNCTION" 
-H_B_10 : "COMMANDS STATS" 
-H_B_11 : "VIDEICALL FUNCTION" 
-H_B_12 : "PRIVATE BOT FUNCTIONS" 
-H_B_13 : "Close Menu"
+H_B_1: "أمر المشرف" 
+H_B_2: "الأمر الرئيسي" 
+H_B_3: "روبوت الأوامر" 
+H_B_4: "أمر إضافي" 
+H_B_5: "مستخدمو النظام" 
+H_B_6: "وضع البحث" 
+H_B_7: "الإعدادات" 
+H_B_8: "تشغيل" 
+H_B_9: "القائمة السوداء" 
+H_B_10: "إحصائيات الأوامر" 
+H_B_11: "إحصائيات الأوامر" 
+H_B_12: "وظائف البوت الخاصة" 
+H_B_13: "إغلاق القائمة"
 
 #PlayMode
 PM_B_1 : "تشغيل مباشر"
