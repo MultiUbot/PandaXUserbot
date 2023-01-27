@@ -11,11 +11,11 @@ import asyncio
 import random
 from datetime import datetime, timedelta
 
-import config
-from config import clean
+from userbot import config
+from userbot.config import clean
 from strings import get_string
-from YukkiMusic import app
-from YukkiMusic.utils.database import (get_lang,
+from userbot import app
+from userbot.utils.database import (get_lang,
                                        get_private_served_chats,
                                        get_served_chats,
                                        is_suggestion)
