@@ -13,7 +13,7 @@ from pyrogram import filters
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 
-from userbot config import BANNED_USERS
+from userbot.config import BANNED_USERS
 from strings import get_command
 from userbot import app
 from userbot.misc import SUDOERS
