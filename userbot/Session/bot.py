@@ -5,7 +5,7 @@ import sys
 from pyrogram import Client
 from pyrogram.types import BotCommand
 
-import config
+from userbot import config
 
 from ..logging import LOGGER
 
