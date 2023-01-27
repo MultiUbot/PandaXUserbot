@@ -617,3 +617,4 @@ class Call(PyTgCalls):
 
 
 Panda = Call()
+Yukki = Panda
