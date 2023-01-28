@@ -39,4 +39,4 @@ removebg
 prettytable
 bs4
 pytube
-pymongo
+pymongo[srv]
