@@ -1,7 +1,7 @@
 import time
 
 from .logging import LOGGER
-
+from pyrogram import Client, errors
 from .Session import *
 from .Session.platforms import *
 
