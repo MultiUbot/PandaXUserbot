@@ -187,6 +187,29 @@ clean = {}
 autoclean = []
 
 
+alive_logo = [
+    f"https://telegra.ph/file/{_}.jpg"
+    for _ in [
+        "99dd9fbca84bc407ac4e8",
+        "c13edd5c46ad875d57bd7",
+        "d3c370234bf81c5bc2214",
+        "50c6b49f05129eff150c0",
+        "d27c36c92679d1fcaf662",
+        "995641228cd4c93895464",
+        "5d5c6e7c33046a14c0fea",
+    ]
+]
+
+
+PREFIX = os.getenv("PREFIX", ".")
+ALIVE_LOGO = os.getenv("ALIVE_LOGO", None) or alive_logo
+LOG_CHAT = int(os.getenv("LOG_GROUP_ID", "0"))
+HEROKU_API = os.getenv("HEROKU_API", None)
+HEROKU_APP_NAME = os.getenv("HEROKU_APP_NAME", None)
+GIT_TOKEN = os.getenv("GIT_TOKEN", None)
+PM_LOGO = os.getenv("PM_LOGO", None) or alive_logo
+
+
 # Images
 START_IMG_URL = getenv("START_IMG_URL", None)
 
