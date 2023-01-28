@@ -1,7 +1,7 @@
 from userbot.Session.mongo import cli
 
 
-collection = cli["Prime"]["welcome"]
+collection = cli["Panda"]["welcome"]
 
 
 async def save_welcome(chat_id, msg_id):
