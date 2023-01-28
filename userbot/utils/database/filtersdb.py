@@ -1,5 +1,5 @@
 from userbot.Session.mongo import cli
-filter = cli["Prime"]["FILTER"]
+filter = cli["Panda"]["FILTER"]
 
 
 async def add_filters(keyword, chat_id, message_id) -> None:
