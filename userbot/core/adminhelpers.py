@@ -14,7 +14,7 @@ async def CheckAdmin(message: Message):
         # You Are Boss Of Pvt Chats.
         return True
 
-    if SELF.status in ("creator", "administrator")::
+    if SELF.status in ("creator", "administrator"):
         await message.edit("__I'm not Admin!__")
         sleep(2)
         await message.delete()
