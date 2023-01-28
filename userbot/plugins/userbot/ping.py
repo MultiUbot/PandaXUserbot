@@ -71,7 +71,7 @@ def get_readable_time(seconds: int) -> str:
     & ~filters.edited
     & ~filters.me
 )
-async def ping_com(client, message: Message, _):
+async def alive(client, message: Message, _):
     time.time()
     eek = message.from_user.first_name
     berak = message.from_user.id
