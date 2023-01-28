@@ -1,5 +1,6 @@
 from userbot.Session.mongo import cli
-collection = cli["Prime"]["gmute"]
+
+collection = cli["Panda"]["gmute"]
 
 
 async def gmute_user(chat):
