@@ -1,6 +1,6 @@
 from userbot.Session.mongo import cli
 
-collection = cli["Prime"]["afk"]
+collection = cli["Panda"]["afk"]
 
 
 async def set_afk(afk_status, afk_since, reason):
