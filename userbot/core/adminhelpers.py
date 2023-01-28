@@ -3,7 +3,7 @@ from time import sleep
 from pyrogram.types import Message
 from pyrogram import enums
 
-from userbot.Session import userbot as app
+from userbot.Session import userbot
 
 
 async def CheckAdmin(message: Message):
@@ -12,7 +12,7 @@ async def CheckAdmin(message: Message):
     creator = enums.ChatMemberStatus.OWNER
     ranks = [admin, creator]
 
-    SELF = await app.get_chat_member(
+    SELF = await userbot.get_chat_member(
         chat_id=message.chat.id, user_id=message.from_user.id
     )
 
