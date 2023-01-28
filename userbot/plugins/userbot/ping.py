@@ -6,11 +6,23 @@ import random
 from pyrogram import __version__ as jembut
 from pyrogram import filters
 from pyrogram.types import Message
+from datetime import datetime
+
+from pyrogram import filters
+from pyrogram.types import Message
+
+from userbot.config import BANNED_USERS, MUSIC_BOT_NAME, PING_IMG_URL
+from strings import get_command
+from userbot import userbot
+from userbot.Session.call import Panda as Yukki
+from userbot.utils import bot_sys_stats
+from userbot.utils.decorators.language import language
+
 
 from userbot.config import ALIVE_LOGO, PREFIX
 from userbot.core import ReplyCheck
-from userbot import CMD_HELP, StartTime, userbot as app
-
+from userbot import CMD_HELP, StartTime
+app = userbot
 CMD_HELP.update(
     {
         "alive": f"""
@@ -53,11 +65,16 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-@app.on_message(filters.command("alive", PREFIX) & filters.me)
-async def alive(_, m):
+@userbot.on_message(
+    filters.command("alive", PREFIX)
+    & filters.group
+    & ~filters.edited
+    & ~filters.me
+)
+async def ping_com(client, message: Message, _):
     time.time()
-    eek = m.from_user.first_name
-    berak = m.from_user.id
+    eek = message.from_user.first_name
+    berak = message.from_user.id
     ahh = app.send_video if {random.choice(ALIVE_LOGO)}.endswith(".mp4") else app.send_photo
     uptime = get_readable_time((time.time() - StartTime))
     reply_msg = f"┌───────═━┈━═──────\n► **Panda Userbot**\n"
@@ -69,20 +86,34 @@ async def alive(_, m):
     time.time()
     reply_msg += f"►Uptime  : `{uptime}`\n└───────═━┈━═──────"
     await asyncio.gather(
-        m.delete(),
+        message.delete(),
         ahh(
-            m.chat.id,
+            message.chat.id,
             {random.choice(ALIVE_LOGO)},
             caption=reply_msg,
-            reply_to_message_id=ReplyCheck(m),
+            reply_to_message_id=ReplyCheck(message),
         ),
     )
 
 
-@app.on_message(filters.command("ping", PREFIX) & filters.me)
-async def pingme(_, message: Message):
+@userbot.on_message(
+    filters.command("ping", PREFIX)
+    & filters.group
+    & ~filters.edited
+    & ~filters.me
+)
+@language
+async def ping_com(client, message: Message, _):
+    response = await message.reply_photo(
+        photo=PING_IMG_URL,
+        caption=_["ping_1"],
+    )
     start = datetime.now()
-    await message.edit("`Pong!`")
-    end = datetime.now()
-    m_s = (end - start).microseconds / 1000
-    await message.edit(f"**Pong!**\n`{m_s} ms`")
+    pytgping = await Yukki.ping()
+    UP, CPU, RAM, DISK = await bot_sys_stats()
+    resp = (datetime.now() - start).microseconds / 1000
+    await response.edit_text(
+        _["ping_2"].format(
+            MUSIC_BOT_NAME, resp, UP, DISK, CPU, RAM, pytgping
+        )
+    )
