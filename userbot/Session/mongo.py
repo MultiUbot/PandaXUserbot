@@ -41,3 +41,11 @@ else:
     _mongo_sync_ = MongoClient(config.MONGO_DB_URI)
     mongodb = _mongo_async_.Panda
     pymongodb = _mongo_sync_.Panda
+
+
+
+
+import motor.motor_asyncio
+
+cli = motor.motor_asyncio.AsyncIOMotorClient(config.MONGO_DB_URI)
+
