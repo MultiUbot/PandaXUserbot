@@ -22,3 +22,20 @@ tgcrypto
 youtube-search
 youtube-search-python
 yt-dlp
+bitlyshortener==0.3.5
+googletrans==4.0.0-rc1
+google==3.0.0
+google-search==1.1.1
+googlesearch-python== 1.0.1
+gTTS
+telegraph==1.4.1
+numpy
+datetime
+wikipedia
+wget
+pyshorteners
+psutil
+removebg
+prettytable
+bs4
+pytube
