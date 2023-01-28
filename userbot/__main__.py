@@ -53,12 +53,12 @@ async def init():
     except:
         pass
     await app.start()
+    await userbot.start()
     for all_module in ALL_MODULES:
         importlib.import_module("userbot.plugins" + all_module)
     LOGGER("userbot.plugins").info(
         "Successfully Imported Modules "
     )
-    await userbot.start()
     await Panda.start()
     try:
         await Panda.stream_call(
