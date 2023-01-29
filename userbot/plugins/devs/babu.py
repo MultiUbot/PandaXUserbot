@@ -5,7 +5,7 @@ from asyncio import gather, get_event_loop, sleep
 
 from aiohttp import ClientSession
 from pyrogram import Client, filters, idle
-from userbot.core.arq import ARQ as arq
+from Python_ARQ import ARQ
 from userbot import config
 from userbot import babu
 
@@ -62,3 +62,12 @@ async def chat(_, message):
     await type_and_send(message)
 
 
+loop = get_event_loop()
+
+
+async def main():
+    global arq
+    session = ClientSession()
+    arq= ARQ(config.ARQ_API_BASE_URL, config.ARQ_API_KEY, session)
+
+loop.run_until_complete(main())
