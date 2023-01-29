@@ -16,7 +16,7 @@ babu = Client(
     ":memory:",
     bot_token=config.BOT_TOKEN,
     api_id=config.API_ID,
-    api_hash="config.API_HASH",
+    api_hash=config.API_HASH,
 )
 
 class Pandatgbot(Client):
