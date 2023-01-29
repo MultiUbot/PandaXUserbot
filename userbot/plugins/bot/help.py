@@ -149,9 +149,9 @@ async def helper_cb(client, CallbackQuery, _):
     elif cb in ["hb13", "apikey"]:
         try:
             if query == "hb13":
-                await apitelegram(bot, CallbackQuery.message, apikey=True)
+                await apitelegram(client, CallbackQuery.message, apikey=True)
             else:
-                await apitelegram(bot, CallbackQuery.message, apikey=True)
+                await apitelegram(client, CallbackQuery.message, apikey=True)
         except Exception as e:
             await CallbackQuery.message.reply("Jika Crash Silahkan Lapor ke @diemmmmmmmmmm")
     elif cb == "hb12":
