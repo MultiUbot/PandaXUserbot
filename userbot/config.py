@@ -49,6 +49,15 @@ class Var:
     # for MONGODB users
     MONGO_URI = getenv("MONGO_DB_URI", None)
 
+
+
+ARQ_API_KEY = "Get this from @ARQRobot"
+LANGUAGE = "id"
+ARQ_API_BASE_URL = "https://arq.hamker.in"
+
+
+
+
 # Get it from my.telegram.org
 API_ID = int(getenv("API_ID", ""))
 API_HASH = getenv("API_HASH")
