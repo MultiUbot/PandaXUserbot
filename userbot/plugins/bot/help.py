@@ -148,7 +148,7 @@ async def helper_cb(client, CallbackQuery, _):
         )
     elif cb in ["hb13", "apikey"]:
         try:
-            if query == "hb13":
+            if cb == "hb13":
                 await apitelegram(client, CallbackQuery.message, apikey=True)
             else:
                 await apitelegram(client, CallbackQuery.message, apikey=True)
