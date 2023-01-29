@@ -1,5 +1,5 @@
 
-from .bot import Pandatgbot
+from .bot import Pandatgbot, babu
 from .dir import dirr
 from .git import git
 from .userbot import Userbot
@@ -11,3 +11,4 @@ git()
 app = Pandatgbot()
 
 userbot = Userbot()
+babu = babu
