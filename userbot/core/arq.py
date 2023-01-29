@@ -482,3 +482,6 @@ class Arq:
         return await self._post_data(
             "execute", data, {"Content-Type": "application/json"}
         )
+
+
+ARQ = Arq
