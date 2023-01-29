@@ -62,7 +62,7 @@ async def chat(_, message):
     await type_and_send(message)
 
 
-loop = get_event_loop()
+
 
 
 async def main():
@@ -70,4 +70,5 @@ async def main():
     session = ClientSession()
     arq= ARQ(config.ARQ_API_BASE_URL, config.ARQ_API_KEY, session)
 
+loop = get_event_loop()
 loop.run_until_complete(main())
