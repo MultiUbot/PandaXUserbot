@@ -18,7 +18,7 @@ async def babuQuery(query: str, user_id: int):
         if config.LANGUAGE == "id"
         else (await arq.translate(query, "id")).result.translatedText
     )
-    resp = (await arq.babu(query, user_id)).result
+    resp = (await arq.luna(query, user_id)).result
     return (
         resp
         if config.LANGUAGE == "id"
