@@ -55,7 +55,7 @@ API_HASH = getenv("API_HASH")
 
 ## Get it from @Botfather in Telegram.
 BOT_TOKEN = getenv("BOT_TOKEN")
-ARQ_API_KEY = getenv("ARQ_API_KEY", "GKJQVA-NTPSRK-JJXULJ-YLRMSC-ARQ")
+ARQ_API_KEY = getenv("ARQ_API_KEY", "IZMCQG-CCIJDB-CKFEGO-SHNWXZ-ARQ")
 LANGUAGE = getenv("LANGUAGE", "id")
 ARQ_API_BASE_URL = "https://arq.hamker.in"
 
