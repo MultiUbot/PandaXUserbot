@@ -79,7 +79,7 @@ async def _callbacks(client: Client, callback_query: CallbackQuery):
         if query == 'home':
             chat_id = callback_query.from_user.id
             message_id = callback_query.message.message_id
-            await bot.edit_message_text(
+            await client.edit_message_text(
                 chat_id=chat_id,
                 message_id=message_id,
                 text="Menu Utama",
@@ -89,9 +89,9 @@ async def _callbacks(client: Client, callback_query: CallbackQuery):
         await callback_query.answer()
         try:
             if query == "hb13":
-                await apitelegram(bot, callback_query.message, apikey=True)
+                await apitelegram(client, callback_query.message, apikey=True)
             else:
-                await apitelegram(bot, callback_query.message, apikey=True)
+                await apitelegram(client, callback_query.message, apikey=True)
         except Exception as e:
             await callback_query.message.reply(f"Jika Eror lapor ke Devolover {e}"))
 
