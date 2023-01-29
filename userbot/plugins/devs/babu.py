@@ -5,7 +5,7 @@ from asyncio import gather, get_event_loop, sleep
 
 from aiohttp import ClientSession
 from pyrogram import Client, filters, idle
-from Python_ARQ import ARQ
+from userbot.core.arq import ARQ
 from userbot import config
 from userbot import babu
 
@@ -21,7 +21,7 @@ async def babuQuery(query: str, user_id: int):
         if config.LANGUAGE == "id"
         else (await arq.translate(query, "id")).result.translatedText
     )
-    resp = (await arq.luna(query, user_id)).result
+    resp = (await arq.babu(query, user_id)).result
     return (
         resp
         if config.LANGUAGE == "id"
