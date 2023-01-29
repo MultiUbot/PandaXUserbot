@@ -53,8 +53,6 @@ async def init():
             BANNED_USERS.add(user_id)
     except:
         pass
-    session = ClientSession()
-    ARQ(config.ARQ_API_BASE_URL, config.ARQ_API_KEY, session)
     await app.start()
     await babu.start()
     await userbot.start()
@@ -63,6 +61,8 @@ async def init():
     LOGGER("userbot.plugins").info(
         "Successfully Imported Modules "
     )
+    session = ClientSession()
+    ARQ(config.ARQ_API_BASE_URL, config.ARQ_API_KEY, session)
     await Panda.start()
     try:
         await Panda.stream_call(
