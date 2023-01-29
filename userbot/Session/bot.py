@@ -10,6 +10,15 @@ from userbot import config
 from ..logging import LOGGER
 
 
+
+
+babu = Client(
+    ":memory:",
+    bot_token=config.BOT_TOKEN,
+    api_id=config.API_ID,
+    api_hash="config.API_HASH",
+)
+
 class Pandatgbot(Client):
     def __init__(self):
         LOGGER(__name__).info(f"Starting Bot")
