@@ -13,18 +13,21 @@ import sys
 
 from pyrogram import idle
 from pytgcalls.exceptions import NoActiveGroupCall
-
+from aiohttp import ClientSession
 from userbot import config
 from userbot.config import BANNED_USERS
-from userbot import LOGGER, app, userbot
+from userbot import LOGGER, app, userbot, babu
 from userbot.Session.call import Panda
 from userbot.plugins import ALL_MODULES
 from userbot.utils.database import get_banned_users, get_gbanned
+from userbot.core.arq import ARQ
 
+arq = None
 loop = asyncio.get_event_loop()
 
 
 async def init():
+    global arq
     if (
         not config.STRING1
         and not config.STRING2
@@ -52,7 +55,10 @@ async def init():
             BANNED_USERS.add(user_id)
     except:
         pass
+    session = ClientSession()
+    arq = ARQ(config.ARQ_API_BASE_URL, config.ARQ_API_KEY, session)
     await app.start()
+    await babu.start()
     await userbot.start()
     for all_module in ALL_MODULES:
         importlib.import_module("userbot.plugins" + all_module)
