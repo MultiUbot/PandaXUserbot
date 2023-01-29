@@ -18,13 +18,13 @@ arq = ARQ(config.ARQ_API_BASE_URL, config.ARQ_API_KEY, session)
 async def babuQuery(query: str, user_id: int):
     query = (
         query
-        if config.LANGUAGE == "en"
+        if config.LANGUAGE == "id"
         else (await arq.translate(query, "id")).result.translatedText
     )
     resp = (await arq.luna(query, user_id)).result
     return (
         resp
-        if config.LANGUAGE == "en"
+        if config.LANGUAGE == "id"
         else (
             await arq.translate(resp, config.LANGUAGE)
         ).result.translatedText
