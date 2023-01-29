@@ -55,8 +55,8 @@ API_HASH = getenv("API_HASH")
 
 ## Get it from @Botfather in Telegram.
 BOT_TOKEN = getenv("BOT_TOKEN")
-ARQ_API_KEY = "Get this from @ARQRobot"
-LANGUAGE = "id"
+ARQ_API_KEY = getenv("ARQ_API_KEY", "IQTXUR-ZENQFY-RURVEI-KBONYT-ARQ")
+LANGUAGE = getenv("LANGUAGE", "id")
 ARQ_API_BASE_URL = "https://arq.hamker.in"
 
 # Database to save your chats and stats... Get MongoDB:-  https://telegra.ph/How-To-get-Mongodb-URI-04-06
