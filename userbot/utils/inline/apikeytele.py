@@ -35,9 +35,9 @@ async def cancelled(msg):
 
 
 
-async def apitelegram(bot, msg, apikey=False):
-    user_id = msg.chat.id
-    api_id_msg = await bot.ask(user_id, 'Silahkan kirimkan  `No HP` Jika ingin membatalkan klik /cancel', filters=filters.text)
+async def apitelegram(client, CallbackQuery, apikey=False):
+    user_id = CallbackQuery.chat.id
+    api_id_msg = await client.ask(user_id, 'Silahkan kirimkan  `No HP` Jika ingin membatalkan klik /cancel', filters=filters.text)
     if await cancelled(api_id_msg):
         return
     try:
@@ -46,7 +46,7 @@ async def apitelegram(bot, msg, apikey=False):
         await api_id_msg.reply('Tidak Benar No hp Gunakan +62xxxxxxx. Please start lagi.', quote=True, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Back", callback_data="settings_back_helper")]]))
         return
     if apikey:
-        await msg.reply(
+        await CallbackQuery.reply(
           "Cek Kode disini",
       reply_markup=InlineKeyboardMarkup([[
         InlineKeyboardButton("Click here", url="tg://openmessage?user_id=777000")
@@ -56,7 +56,7 @@ async def apitelegram(bot, msg, apikey=False):
     except Exception as ap:
         LOGS.info(f"ERROR - {ap}")
         exit(1)  
-    code_msg = await bot.ask(user_id, 'Mengirim  `code otp `', filters=filters.text)
+    code_msg = await client.ask(user_id, 'Mengirim  `code otp `', filters=filters.text)
     if await cancelled(api_id_msg):
         return
     hk_code = code_msg.text.replace(" ", "")
@@ -89,7 +89,7 @@ async def apitelegram(bot, msg, apikey=False):
     except Exception as ap:
         LOGS.info(f"ERROR - {ap}")
         exit(1)      
-    await msg.reply(
+    await CallbackQuery.reply(
           f"Ini Adalah Data Kamu\n\n𝗔𝗣𝗜_𝗜𝗗: `{app_id}`\n𝗔𝗣𝗜_𝗛𝗔𝗦𝗛: `{api_hash}`",
       reply_markup=InlineKeyboardMarkup([[
         InlineKeyboardButton("DEV", url="https://t.me/diemmmmmmmmmm")
