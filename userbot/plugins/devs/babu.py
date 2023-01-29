@@ -70,7 +70,7 @@ from pyrogram.types import CallbackQuery, InlineKeyboardMarkup, InlineKeyboardBu
 from userbot.utils.inline.apikeytele import apitelegram
 
 
-@babu.on_callback_query()
+@Client.on_callback_query()
 async def _callbacks(client: Client, callback_query: CallbackQuery):
     user = await client.get_me()
     mention = user["mention"]
