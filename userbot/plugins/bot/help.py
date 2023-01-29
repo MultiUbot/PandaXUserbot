@@ -9,7 +9,7 @@
 
 
 from typing import Union
-
+from userbot.utils.inline.apikeytele import apitelegram
 from pyrogram import filters, types
 from pyrogram.types import InlineKeyboardMarkup, Message
 
@@ -146,6 +146,14 @@ async def helper_cb(client, CallbackQuery, _):
         await CallbackQuery.edit_message_text(
             _["HELP_11"], reply_markup=keyboard
         )
+    elif cb in ["hb13", "apikey"]:
+        try:
+            if query == "hb13":
+                await apitelegram(bot, CallbackQuery.message, apikey=True)
+            else:
+                await apitelegram(bot, CallbackQuery.message, apikey=True)
+        except Exception as e:
+            await CallbackQuery.message.reply("Jika Crash Silahkan Lapor ke @diemmmmmmmmmm")
     elif cb == "hb12":
         await CallbackQuery.edit_message_text(
             _["HELP_12"], reply_markup=keyboard
