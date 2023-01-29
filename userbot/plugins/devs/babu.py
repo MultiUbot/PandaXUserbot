@@ -70,29 +70,22 @@ from pyrogram.types import CallbackQuery, InlineKeyboardMarkup, InlineKeyboardBu
 from userbot.utils.inline.apikeytele import apitelegram
 
 
-@Client.on_callback_query()
-async def _callbacks(client: Client, callback_query: CallbackQuery):
+@babu.on_callback_query()
+async def _callbacks(client, inline_query):
     user = await client.get_me()
     mention = user["mention"]
-    query = callback_query.data.lower()
+    query = inline_query.data.lower()
     if query.startswith("home"):
         if query == 'home':
-            chat_id = callback_query.from_user.id
-            message_id = callback_query.message.message_id
+            chat_id = inline_query.from_user.id
+            message_id = inline_query.message.message_id
             await client.edit_message_text(
                 chat_id=chat_id,
                 message_id=message_id,
                 text="Menu Utama",
                 reply_markup=InlineKeyboardMarkup(keyboard),
             )
-    elif query in ["hb13", "apikey"]:
-        await callback_query.answer()
-        try:
-            if query == "hb13":
-                await apitelegram(client, callback_query.message, apikey=True)
-            else:
-                await apitelegram(client, callback_query.message, apikey=True)
-        except Exception as e:
-            await callback_query.message.reply(f"Jika Eror lapor ke Devolover {e}")
-
+    elif query == "apikey":
+        await apitelegram(client, inline_query.message)
+     
                
