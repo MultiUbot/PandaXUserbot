@@ -20,7 +20,7 @@ from userbot import LOGGER, app, userbot, babu
 from userbot.Session.call import Panda
 from userbot.plugins import ALL_MODULES
 from userbot.utils.database import get_banned_users, get_gbanned
-from userbot.core.arq import ARQ
+from Python_ARQ import ARQ
 
 loop = asyncio.get_event_loop()
 
