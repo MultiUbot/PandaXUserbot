@@ -12,7 +12,9 @@ from userbot import babu
 bot_id = int(config.BOT_TOKEN.split(":")[0])
 arq = None
 
-
+session = ClientSession()
+arq = ARQ(config.ARQ_API_BASE_URL, config.ARQ_API_KEY, session)
+   
 async def babuQuery(query: str, user_id: int):
     query = (
         query
