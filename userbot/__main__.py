@@ -27,7 +27,6 @@ loop = asyncio.get_event_loop()
 
 
 async def init():
-    global arq
     if (
         not config.STRING1
         and not config.STRING2
@@ -55,8 +54,6 @@ async def init():
             BANNED_USERS.add(user_id)
     except:
         pass
-    session = ClientSession()
-    arq = ARQ(config.ARQ_API_BASE_URL, config.ARQ_API_KEY, session)
     await app.start()
     await babu.start()
     await userbot.start()
