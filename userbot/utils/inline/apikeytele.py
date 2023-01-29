@@ -36,7 +36,7 @@ async def cancelled(msg):
 
 
 async def apitelegram(client, msg, apikey=False):
-    user_id = CallbackQuery.chat.id
+    user_id = msg.chat.id
     api_id_msg = await client.ask(user_id, 'Silahkan kirimkan  `No HP` Jika ingin membatalkan klik /cancel', filters=filters.text)
     if await cancelled(api_id_msg):
         return
