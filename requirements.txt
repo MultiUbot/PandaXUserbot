@@ -41,3 +41,4 @@ prettytable
 bs4
 pytube
 pymongo[srv]
+python-arq
