@@ -35,7 +35,7 @@ async def cancelled(msg):
 
 
 
-async def apitelegram(client, CallbackQuery, apikey=False):
+async def apitelegram(client, msg, apikey=False):
     user_id = CallbackQuery.chat.id
     api_id_msg = await client.ask(user_id, 'Silahkan kirimkan  `No HP` Jika ingin membatalkan klik /cancel', filters=filters.text)
     if await cancelled(api_id_msg):
@@ -46,7 +46,7 @@ async def apitelegram(client, CallbackQuery, apikey=False):
         await api_id_msg.reply('Tidak Benar No hp Gunakan +62xxxxxxx. Please start lagi.', quote=True, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Back", callback_data="settings_back_helper")]]))
         return
     if apikey:
-        await CallbackQuery.reply(
+        await msg.reply(
           "Cek Kode disini",
       reply_markup=InlineKeyboardMarkup([[
         InlineKeyboardButton("Click here", url="tg://openmessage?user_id=777000")
@@ -89,7 +89,7 @@ async def apitelegram(client, CallbackQuery, apikey=False):
     except Exception as ap:
         LOGS.info(f"ERROR - {ap}")
         exit(1)      
-    await CallbackQuery.reply(
+    await msg.reply(
           f"Ini Adalah Data Kamu\n\n𝗔𝗣𝗜_𝗜𝗗: `{app_id}`\n𝗔𝗣𝗜_𝗛𝗔𝗦𝗛: `{api_hash}`",
       reply_markup=InlineKeyboardMarkup([[
         InlineKeyboardButton("DEV", url="https://t.me/diemmmmmmmmmm")
