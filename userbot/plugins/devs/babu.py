@@ -85,7 +85,7 @@ async def _callbacks(client, inline_query):
                 text="Menu Utama",
                 reply_markup=InlineKeyboardMarkup(keyboard),
             )
-    elif query == "apikey":
+    elif query == "hb13":
         await apitelegram(client, inline_query.message)
      
                
