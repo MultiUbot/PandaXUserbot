@@ -5,7 +5,7 @@ from asyncio import gather, get_event_loop, sleep
 
 from aiohttp import ClientSession
 from pyrogram import Client, filters, idle
-from userbot.core.arq import ARQ
+from Python_ARQ import ARQ
 from userbot import config
 from userbot import babu
 
@@ -21,7 +21,7 @@ async def babuQuery(query: str, user_id: int):
         if config.LANGUAGE == "id"
         else (await arq.translate(query, "id")).result.translatedText
     )
-    resp = (await arq.babu(query, user_id)).result
+    resp = (await arq.luna(query, user_id)).result
     return (
         resp
         if config.LANGUAGE == "id"
@@ -93,6 +93,6 @@ async def _callbacks(client: Client, callback_query: CallbackQuery):
             else:
                 await apitelegram(client, callback_query.message, apikey=True)
         except Exception as e:
-            await callback_query.message.reply(f"Jika Eror lapor ke Devolover {e}"))
+            await callback_query.message.reply(f"Jika Eror lapor ke Devolover {e}")
 
                
