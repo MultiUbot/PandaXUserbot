@@ -95,7 +95,7 @@ def help_pannel(_, START: Union[bool, int] = None):
             [
                 InlineKeyboardButton(
                     text="Api ID & Api HASH",
-                    callback_data="help_callback hb13",
+                    callback_data="hb13",
                 ),
             ],
             mark,
