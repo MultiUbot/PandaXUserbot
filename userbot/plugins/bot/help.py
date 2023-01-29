@@ -146,15 +146,7 @@ async def helper_cb(client, CallbackQuery, _):
         await CallbackQuery.edit_message_text(
             _["HELP_11"], reply_markup=keyboard
         )
-    elif cb in ["hb13", "apikey"]:
-        try:
-            if cb == "hb13":
-                await apitelegram(client, CallbackQuery.message, apikey=True)
-            else:
-                await apitelegram(client, CallbackQuery.message, apikey=True)
-        except Exception as e:
-            await CallbackQuery.message.reply(f"Jika Crash Silahkan Lapor ke @diemmmmmmmmmm {e}")
-    elif cb == "hb12":
+        elif cb == "hb12":
         await CallbackQuery.edit_message_text(
             _["HELP_12"], reply_markup=keyboard
         )
