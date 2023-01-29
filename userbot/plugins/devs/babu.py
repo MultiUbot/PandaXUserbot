@@ -68,7 +68,4 @@ async def chat(_, message):
 async def main():
     global arq
     session = ClientSession()
-    arq= ARQ(config.ARQ_API_BASE_URL, config.ARQ_API_KEY, session)
-
-loop = get_event_loop()
-loop.run_until_complete(main())
+    arq = ARQ(config.ARQ_API_BASE_URL, config.ARQ_API_KEY, session)
