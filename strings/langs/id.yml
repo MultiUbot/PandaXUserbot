@@ -198,7 +198,7 @@ track_2 : "**Error**\n\nTidak ada **{0} Top 10 Playlist** di server bot. Silakan
 # TOOLS
 
 #Lyrics
-lyrics_1 : "**Penggunaan:**\n\n/lirik [ Nama Musik]"
+lyrics_1 : "**Penggunaan:**\n\n/lyrics [ Nama Musik]"
 lyrics_2 : "Mencari Lirik"
 lyrics_3 : "❌ Gagal mengambil lirik😞.\n\n💡**Mencoba Mencari:** {0}"
 lyrics_4 : "Klik tombol di bawah ini dan cari lirik untuk menghindari pencarian lirik jenis spam yang panjang."
