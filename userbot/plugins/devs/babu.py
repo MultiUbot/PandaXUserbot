@@ -66,26 +66,3 @@ async def chat(_, message):
 
 
 
-from pyrogram.types import CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
-from userbot.utils.inline.apikeytele import apitelegram
-
-
-@babu.on_callback_query()
-async def _callbacks(client, inline_query):
-    user = await client.get_me()
-    mention = user["mention"]
-    query = inline_query.data.lower()
-    if query.startswith("home"):
-        if query == 'home':
-            chat_id = inline_query.from_user.id
-            message_id = inline_query.message.message_id
-            await client.edit_message_text(
-                chat_id=chat_id,
-                message_id=message_id,
-                text="Menu Utama",
-                reply_markup=InlineKeyboardMarkup(keyboard),
-            )
-    elif query == "hb13":
-        await apitelegram(client, inline_query.message)
-     
-               
