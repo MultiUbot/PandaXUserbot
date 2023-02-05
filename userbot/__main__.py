@@ -16,7 +16,7 @@ from pytgcalls.exceptions import NoActiveGroupCall
 from aiohttp import ClientSession
 from userbot import config
 from userbot.config import BANNED_USERS
-from userbot import LOGGER, app, userbot, babu
+from userbot import LOGGER, app, userbot, babu, extrabot
 from userbot.Session.call import Panda
 from userbot.plugins import ALL_MODULES
 from userbot.utils.database import get_banned_users, get_gbanned
@@ -56,6 +56,7 @@ async def init():
     await app.start()
     await babu.start()
     await userbot.start()
+    extrabot.start()
     for all_module in ALL_MODULES:
         importlib.import_module("userbot.plugins" + all_module)
     LOGGER("userbot.plugins").info(
