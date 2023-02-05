@@ -24,11 +24,11 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
                 text="Menu Utama",
                 reply_markup=InlineKeyboardMarkup(keyboard),
             )  
-    elif query in ["hb13", "apitele"]:
+    elif query in ["hb13"]:
         await callback_query.answer()
         try:
             if query == "hb13":
-                await apitelegram(bot, callback_query.message, apitele=True)
+                await apitelegram(bot, callback_query.message)
         except Exception as e:
             await callback_query.message.reply(ERROR_MESSAGE.format(str(e)))
     
