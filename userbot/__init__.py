@@ -13,7 +13,7 @@ Resso = RessoAPI()
 SoundCloud = SoundAPI()
 Telegram = TeleAPI()
 
-
+from pyrogram import Client, filters
 
 from .misc import dbb, heroku, sudo
 
@@ -37,3 +37,9 @@ __version_code__ = (
     .strip()
     or "0"
 )
+
+
+
+SUDOERS = filters.user()
+bot_start_time = time.time()
+
