@@ -5,7 +5,7 @@ import aiofiles
 from pyrogram import filters
 from pyrogram.types import Message
 
-from userbot import SUDOERS, app as babu
+from userbot import SUDOERS, babu as app
 from userbot.core.decorators.errors import capture_err
 from userbot.core.keyboard import ikb
 from userbot.core.pastebin import paste
