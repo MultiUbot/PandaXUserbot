@@ -52,3 +52,12 @@ for filename in os.listdir(r"./strings/langs/"):
         for item in languages["en"]:
             if item not in languages[language_name]:
                 languages[language_name][item] = languages["en"][item]
+    try:
+        languages_present[language_name] = languages[language_name][
+            "name"
+        ]
+    except Exception as e:
+        print(
+            f"Ada kesalahan {e} di bahasa silakan lapor ke deploloper"
+        )
+        sys.exit()
