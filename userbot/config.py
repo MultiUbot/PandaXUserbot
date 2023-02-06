@@ -216,7 +216,7 @@ HEROKU_API = os.getenv("HEROKU_API", None)
 HEROKU_APP_NAME = os.getenv("HEROKU_APP_NAME", None)
 GIT_TOKEN = os.getenv("GIT_TOKEN", None)
 PM_LOGO = os.getenv("PM_LOGO", None) or alive_logo
-
+LOG_GROUP_ID = LOG_CHAT
 
 # Images
 START_IMG_URL = getenv("START_IMG_URL", None)
