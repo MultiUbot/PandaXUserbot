@@ -55,6 +55,7 @@ async def init():
         pass
     await app.start()
     await babu.start()
+    await extrabot.start()
     await userbot.start()
     for all_module in ALL_MODULES:
         importlib.import_module("userbot.plugins" + all_module)
@@ -76,7 +77,6 @@ async def init():
     except:
         pass
     await Panda.decorators()
-    extrabot.start()
     LOGGER("userbot").info("Panda Music Bot Started Successfully")
     await idle()
 
