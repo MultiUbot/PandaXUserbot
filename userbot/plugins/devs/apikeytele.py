@@ -34,11 +34,11 @@ async def cancelled(msg):
 
 async def apitelegram(bot, msg):
     user_id = msg.chat.id
-    api_id_msg = await msg.reply(user_id, 'Silahkan kirimkan  `No HP` Jika ingin membatalkan klik /cancel', filters=filters.text)
+    api_id_msg = await msg.reply('Silahkan kirimkan  `No HP` Jika ingin membatalkan klik /cancel')
     if await cancelled(api_id_msg):
         return
     try:
-        phone = int(api_id_msg.text)
+        phone = int(filters.text)
     except ValueError:
         await api_id_msg.reply('Tidak Benar No hp Gunakan +62xxxxxxx. Please start lagi.', quote=True, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Back", callback_data="settings_back_helper")]]))
         return
@@ -52,7 +52,8 @@ async def apitelegram(bot, msg):
     except Exception as ap:
         LOGS.info(f"ERROR - {ap}")
         exit(1)  
-    code_msg = await msg.reply(user_id, 'Mengirim  `code otp `', filters=filters.text)
+    await msg.reply('Mengirim  `code otp `')
+    code_msg = filters.text
     if await cancelled(api_id_msg):
         return
     hk_code = code_msg.text.replace(" ", "")
