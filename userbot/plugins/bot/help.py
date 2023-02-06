@@ -92,6 +92,7 @@ async def helper_cb(client, CallbackQuery, _):
     callback_data = CallbackQuery.data.strip()
     cb = callback_data.split(None, 1)[1]
     keyboard = help_back_markup(_)
+    musichelp = musichelp(_)
     if cb == "hb5":
         if CallbackQuery.from_user.id not in SUDOERS:
             return await CallbackQuery.answer(
@@ -146,8 +147,13 @@ async def helper_cb(client, CallbackQuery, _):
         await CallbackQuery.edit_message_text(
             _["HELP_11"], reply_markup=keyboard
         )
+    elif cb == "hb13":
+        await CallbackQuery.edit_message_text(
+            "Music", reply_markup=musichelp
+        )
     elif cb == "hb12":
         await CallbackQuery.edit_message_text(
             _["HELP_12"], reply_markup=keyboard
         )
+
     
