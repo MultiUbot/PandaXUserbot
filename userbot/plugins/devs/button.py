@@ -9,7 +9,7 @@ ERROR_MESSAGE = "Oops! \n\n**Error😔** : {} " \
 
                
 @extrabot.on_callback_query()
-async def _callbacks(bot: Client, callback_query: CallbackQuery):
+async def _callbacks(bot, callback_query, _):
     user = await bot.get_me()
     # user_id = callback_query.from_user.id
     mention = user["mention"]
