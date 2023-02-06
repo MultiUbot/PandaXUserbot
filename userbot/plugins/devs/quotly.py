@@ -6,7 +6,7 @@ from pyrogram.types import Message
 from aiohttp import ClientSession
 from userbot import babu as app
 from userbot.core.decorators.errors import capture_err
-
+from userbot import config
 
 session = ClientSession()
 arq = ARQ(config.ARQ_API_BASE_URL, config.ARQ_API_KEY, session)
