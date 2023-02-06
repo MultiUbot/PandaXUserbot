@@ -5,7 +5,7 @@ from functools import wraps
 from pyrogram.errors.exceptions.forbidden_403 import ChatWriteForbidden
 
 from userbot import babu as app
-from userbot.config import config
+from userbot import config
 
 
 def split_limits(text):
