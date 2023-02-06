@@ -55,7 +55,6 @@ async def init():
         pass
     await app.start()
     await babu.start()
-    await extrabot.start()
     await userbot.start()
     for all_module in ALL_MODULES:
         importlib.import_module("userbot.plugins" + all_module)
