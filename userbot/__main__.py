@@ -62,6 +62,7 @@ async def init():
         "Successfully Imported Modules "
     )
     await Panda.start()
+    await extrabot.start()
     try:
         await Panda.stream_call(
             "http://docs.evostream.com/sample_content/assets/sintel1m720p.mp4"
