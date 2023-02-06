@@ -21,8 +21,7 @@ from userbot.utils import help_pannel
 from userbot.utils.database import get_lang, is_commanddelete_on
 from userbot.utils.decorators.language import (LanguageStart,
                                                   languageCB)
-from userbot.utils.inline.help import (help_back_markup,
-                                          private_help_panel)
+from userbot.utils.inline.help import help_back_markup, private_help_panel, musichelp
 
 ### Command
 HELP_COMMAND = get_command("HELP_COMMAND")
