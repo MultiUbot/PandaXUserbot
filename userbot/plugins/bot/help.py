@@ -146,7 +146,7 @@ async def helper_cb(client, CallbackQuery, _):
             _["HELP_11"], reply_markup=keyboard
         )
     elif cb == "hb13":
-        await CallbackQuery.edit_message_text(musichelp(_))
+        await CallbackQuery.reply_text(_["help_1"], reply_markup=musichelp(_))
     elif cb == "hb12":
         await CallbackQuery.edit_message_text(
             _["HELP_12"], reply_markup=keyboard
