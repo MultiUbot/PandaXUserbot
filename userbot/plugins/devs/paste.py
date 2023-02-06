@@ -9,7 +9,7 @@ from userbot import SUDOERS, babu as app
 from userbot.core.decorators.errors import capture_err
 from userbot.core.keyboard import ikb
 from userbot.core.pastebin import paste
-
+pattern = re.compile(r"^text/|json$|yaml$|xml$|toml$|x-sh$|x-shellscript$")
 
 
 @app.on_message(filters.command("paste") & ~filters.edited)
