@@ -137,6 +137,25 @@ def help_back_markup(_):
     return upl
 
 
+
+def helpkembali(_):
+    upli = InlineKeyboardMarkup(
+        [
+            [
+                InlineKeyboardButton(
+                    text=_["BACK_BUTTON"],
+                    callback_data=f"hb13",
+                ),
+                InlineKeyboardButton(
+                    text=_["CLOSE_BUTTON"], callback_data=f"close"
+                ),
+            ]
+        ]
+    )
+    return upli
+
+
+
 def private_help_panel(_):
     buttons = [
         [
