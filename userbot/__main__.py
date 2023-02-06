@@ -61,8 +61,6 @@ async def init():
     LOGGER("userbot.plugins").info(
         "Successfully Imported Modules "
     )
-    session = ClientSession()
-    arq = ARQ(config.ARQ_API_BASE_URL, config.ARQ_API_KEY, session)
     await Panda.start()
     try:
         await Panda.stream_call(
