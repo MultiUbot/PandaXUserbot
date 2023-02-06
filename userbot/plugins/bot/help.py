@@ -21,7 +21,7 @@ from userbot.utils import help_pannel
 from userbot.utils.database import get_lang, is_commanddelete_on
 from userbot.utils.decorators.language import (LanguageStart,
                                                   languageCB)
-from userbot.utils.inline.help import help_back_markup, private_help_panel, musichelp
+from userbot.utils.inline.help import help_back_markup, private_help_panel, musichelp, helpkembali
 
 ### Command
 HELP_COMMAND = get_command("HELP_COMMAND")
@@ -90,7 +90,7 @@ async def help_com_group(client, message: Message, _):
 async def helper_cb(client, CallbackQuery, _):
     callback_data = CallbackQuery.data.strip()
     cb = callback_data.split(None, 1)[1]
-    keyboard = help_back_markup(_)
+    keyboard = helpkembali(_)
     if cb == "hb5":
         if CallbackQuery.from_user.id not in SUDOERS:
             return await CallbackQuery.answer(
